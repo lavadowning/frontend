@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getCartProducts } from "@/lib/getProducts";
 import Image from "next/image";
 import Link from "next/link";
+import { getStrapiMedia } from "./utils";
 type Product = {
   documentId: string;
   name: string;
@@ -54,7 +55,6 @@ export default function CartClient() {
   };
 
   const total = products.reduce((acc, p) => acc + p.price * p.count, 0);
-
   return (
     <div>
       {/* Desktop Table */}
@@ -74,7 +74,7 @@ export default function CartClient() {
               <tr key={product.documentId} className="border-t">
                 <td className="p-4 flex items-center space-x-3">
                   <Image
-                    src={`https://wealthy-idea-ec9a86a949.strapiapp.com${product.image.url}`}
+                    src={getStrapiMedia(product.image.url)}
                     alt={product.name}
                     width={50}
                     height={50}
@@ -139,7 +139,7 @@ export default function CartClient() {
           >
             <div className="flex items-center gap-4">
               <Image
-                src={`https://wealthy-idea-ec9a86a949.strapiapp.com${product.image.url}`}
+                src={getStrapiMedia(product.image.url)}
                 alt={product.name}
                 width={60}
                 height={60}
