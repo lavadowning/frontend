@@ -1,8 +1,10 @@
 import qs from "qs";
+import { getStrapiURL } from "./utils";
+const StrapiURL = getStrapiURL();
 export async function getProducts() {
   try {
     const res = await fetch(
-      "http://localhost:1337/api/products?populate=*",
+      `${StrapiURL}/api/products?populate=*`,
     );
     const json = await res.json();
     return json.data || [];
@@ -13,9 +15,7 @@ export async function getProducts() {
 }
 export async function getOneProduct(id) {
   try {
-    const res = await fetch(
-      `http://localhost:1337/api/products/${id}?populate=*`
-    );
+    const res = await fetch(`${StrapiURL}/api/products/${id}?populate=*`);
     const json = await res.json();
     return json.data || [];
   } catch (error) {
@@ -48,7 +48,7 @@ export async function getFilteredProducts(category: string, maxPrice: number) {
       }
     );
 
-    const res = await fetch(`http://localhost:1337/api/products?${query}`, {
+    const res = await fetch(`${StrapiURL}/api/products?${query}`, {
       cache: "no-store",
     });
     const data = await res.json();
@@ -80,7 +80,7 @@ export async function getRecentProducts(
       }
     );
 
-    const res = await fetch(`http://localhost:1337/api/products?${query}`);
+    const res = await fetch(`${StrapiURL}/api/products?${query}`);
 
     if (!res.ok) {
       throw new Error(`Ошибка при запросе: ${res.statusText}`);

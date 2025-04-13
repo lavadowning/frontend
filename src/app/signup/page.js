@@ -21,7 +21,6 @@ export default function SignUpPage() {
         password: form.password,
       });
       alert("Account created successfully");
-      // 👉 Добавляем параметр authRefreshed
       router.push("/profile?authRefreshed=true");
     } catch (err) {
       setError(err.message || "Registration failed");
@@ -82,7 +81,7 @@ export default function SignUpPage() {
             className="w-full flex items-center justify-center border py-3 mt-3 rounded-md"
           >
             <img
-              src="http://localhost:1337/uploads/google_8f9a43515e.png"
+              src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/google_8f9a43515e.png"
               alt="Google"
               className="w-5 h-5 mr-2"
             />
@@ -99,7 +98,7 @@ export default function SignUpPage() {
 
         <div className="w-full lg:w-1/2 bg-gray-100 flex justify-center items-center p-6">
           <img
-            src="http://localhost:1337/uploads/shopping_dbaaf6e783.png"
+            src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/shopping_dbaaf6e783.png"
             alt="Shopping"
             className="w-full max-w-md"
           />

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { getCartProducts } from "@/lib/getProducts";
 import Image from "next/image";
 import Link from "next/link";
-
 type Product = {
   documentId: string;
   name: string;
@@ -75,7 +74,7 @@ export default function CartClient() {
               <tr key={product.documentId} className="border-t">
                 <td className="p-4 flex items-center space-x-3">
                   <Image
-                    src={`http://localhost:1337${product.image.url}`}
+                    src={`https://wealthy-idea-ec9a86a949.strapiapp.com${product.image.url}`}
                     alt={product.name}
                     width={50}
                     height={50}
@@ -140,7 +139,7 @@ export default function CartClient() {
           >
             <div className="flex items-center gap-4">
               <Image
-                src={`http://localhost:1337${product.image.url}`}
+                src={`https://wealthy-idea-ec9a86a949.strapiapp.com${product.image.url}`}
                 alt={product.name}
                 width={60}
                 height={60}

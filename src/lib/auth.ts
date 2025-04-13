@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:1337";
+import { getStrapiURL } from "./utils";
+const API_URL = getStrapiURL();
 
 function setTokenCookie(token: string) {
   document.cookie = `token=${token}; path=/;`;

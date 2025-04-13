@@ -30,7 +30,7 @@ export default function LoginPage() {
       <div className="flex flex-col lg:flex-row flex-1">
         <div className="w-full lg:w-1/2 bg-gray-100 flex justify-center items-center p-6">
           <img
-            src="http://localhost:1337/uploads/shopping_dbaaf6e783.png"
+            src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/shopping_dbaaf6e783.png"
             alt="Shopping"
             className="w-full max-w-md"
           />

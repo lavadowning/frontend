@@ -19,7 +19,7 @@ export default async function ProductPage({ params }) {
 
         <div className="w-full h-[400px] relative">
           <Image
-            src={`http://localhost:1337${product.image.url}`}
+            src={`https://wealthy-idea-ec9a86a949.strapiapp.com${product.image.url}`}
             alt={product.name}
             layout="fill"
             objectFit="contain"

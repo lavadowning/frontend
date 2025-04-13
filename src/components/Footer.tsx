@@ -72,18 +72,18 @@ const Footer = () => {
           </p>
           <div className="flex gap-3 mt-2">
             <img
-              src="http://localhost:1337/uploads/QR_code_7b4057244f.png"
+              src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/QR_code_7b4057244f.png"
               alt="QR Code"
               className="w-16 h-16"
             />
             <div className="flex flex-col gap-2">
               <img
-                src="http://localhost:1337/uploads/google_play_42a6945e05.png"
+                src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/google_play_42a6945e05.png"
                 alt="Google Play"
                 className="w-24"
               />
               <img
-                src="http://localhost:1337/uploads/app_store_eb0a5e6b8f.png"
+                src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/app_store_eb0a5e6b8f.png"
                 alt="App Store"
                 className="w-24"
               />

@@ -14,7 +14,9 @@ export default function ProductCard({ product }) {
     comments = [],
   } = product;
 
-  const imageUrl = image?.url? `http://localhost:1337${image.url}` : "/placeholder.jpg";
+  const imageUrl = image?.url
+    ? `https://wealthy-idea-ec9a86a949.strapiapp.com${image.url}`
+    : "/placeholder.jpg";
 
   // Расчёт звёзд
   const fullStars = Math.floor(rating);

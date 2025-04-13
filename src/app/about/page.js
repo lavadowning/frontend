@@ -21,7 +21,7 @@ export default function About() {
         </div>
         <div>
           <Image
-            src="http://localhost:1337/uploads/shopping_974cde66e3.jpg"
+            src="https://wealthy-idea-ec9a86a949.media.strapiapp.com/shopping_974cde66e3.jpg"
             alt="Shopping"
             width={500}
             height={500}
@@ -68,17 +68,17 @@ export default function About() {
             {
               name: "Tom Cruise",
               role: "Founder & Chairman",
-              img: "http://localhost:1337/uploads/tom_6a1cb5eb95.png",
+              img: "https://wealthy-idea-ec9a86a949.media.strapiapp.com/tom_6a1cb5eb95.png",
             },
             {
               name: "Emma Watson",
               role: "Managing Director",
-              img: "http://localhost:1337/uploads/emma_f107ce68ea.png",
+              img: "https://wealthy-idea-ec9a86a949.media.strapiapp.com/emma_f107ce68ea.png",
             },
             {
               name: "Will Smith",
               role: "Product Designer",
-              img: "http://localhost:1337/uploads/will_073d9d8939.jpg",
+              img: "https://wealthy-idea-ec9a86a949.media.strapiapp.com/will_073d9d8939.jpg",
             },
           ].map((member, index) => (
             <div key={index} className="text-center">
