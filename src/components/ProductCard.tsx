@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Star, StarHalf } from "lucide-react";
+import { getStrapiMedia } from "@/lib/utils";
 
 export default function ProductCard({ product }) {
   const {
@@ -14,9 +15,7 @@ export default function ProductCard({ product }) {
     comments = [],
   } = product;
 
-  const imageUrl = image?.url
-    ? `https://wealthy-idea-ec9a86a949.strapiapp.com${image.url}`
-    : "/placeholder.jpg";
+  const imageUrl = getStrapiMedia(image?.url);
 
   // Расчёт звёзд
   const fullStars = Math.floor(rating);

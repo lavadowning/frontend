@@ -14,7 +14,7 @@ import {
   PaginationNext,
 } from "@/components/ui/pagination";
 
-const PRODUCTS_PER_PAGE = 8;
+const PRODUCTS_PER_PAGE = 4;
 
 function CategoryContent() {
   const params = useParams();

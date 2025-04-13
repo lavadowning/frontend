@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Star, StarHalf } from "lucide-react";
 import { Truck, Undo2 } from "lucide-react";
 import AddToCartButton from "@/components/CartButton";
+import { getStrapiMedia } from "@/lib/utils";
 export default async function ProductPage({ params }) {
   const { id } = await params;
   const product = await getOneProduct(id);
@@ -12,6 +13,7 @@ export default async function ProductPage({ params }) {
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
   const recentProducts = await getRecentProducts(product.category, product.id);
   const Products = recentProducts.slice(0, 4);
+  const imageUrl = getStrapiMedia(product.image.url);
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -19,7 +21,7 @@ export default async function ProductPage({ params }) {
 
         <div className="w-full h-[400px] relative">
           <Image
-            src={`https://wealthy-idea-ec9a86a949.strapiapp.com${product.image.url}`}
+            src={imageUrl}
             alt={product.name}
             layout="fill"
             objectFit="contain"
