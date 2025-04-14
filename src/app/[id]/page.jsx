@@ -76,7 +76,7 @@ export default async function ProductPage({ params }) {
         </div>
       </div>
       <div className="flex flex-col pt-4 items-center">
-        <div className="font-medium pb-4">Recent products</div>
+        <div className="font-medium pb-4">Related products</div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {Products.map((product) => (
             <ProductCard key={product.id} product={product} />
